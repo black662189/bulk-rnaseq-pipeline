@@ -15,3 +15,5 @@
 - `depends_script/PPI/fd_relaion.py`保留Python 2语法；规则明确用`params.python2`调用，已用服务器Python 2编译检查通过。这不是Python 3兼容脚本。
 - 19个规则文件属于Snakemake DSL，没有用Python AST误判；本次未跑Snakemake全流程。
 - 参考基因组不同版本的YAML分目录保存，避免覆盖同名物种配置。
+
+Git发布时统一文本换行为LF，源清单保留原始服务器字节校验值；publication_sha256.json记录Git索引中发布文件的SHA-256（不含清单自身）。换行标准化不改变统计实现。
