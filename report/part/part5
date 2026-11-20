@@ -1,0 +1,16 @@
+				</tbody>
+				</table>
+			</div>
+
+
+<!--part 3.2 分析策略-->
+			<h2><a name='analysis'>3.2 分析策略与结果概述</a></h2>
+			<p class='table_title'>表 3.2 分析策略</p>
+			<img src='image/analysis_strategy.png' alt='分析策略' width="60%" height="auto">
+			<p class='paragraph'>基因表达具有时间和空间特异性，外界刺激和内部环境都会影响基因的表达。在两个不同条件（如对照与处理、野生型和突变型、不同时间点、不同组织等）下，表达水平存在显著差异的基因，称之为差异表达基因（Differentially Expressed Gene，DEG）。根据两组样品之间表达水平的改变倍数与统计学检验确定差异基因，差异基因筛选标准为：|log2foldchange|&gt;1且q value &lt;0.05，差异表达基因可以划分为上调基因（Up-regulated Gene）和下调基因（Down-regulated Gene）。上调基因在处理组中的表达水平高于对照组中的表达水平；反之为下调基因。图3.2展示了各个比较组的差异基因数目<!--（高清图片请点击<a href='Report/4.Statistics/All_comparison.DEG_stat.pdf'> 如下链接</a>）。-->
+			</p>
+			<a href="Report/4.Statistics/All_comparison.DEG_stat.pdf" target="view_window">
+				<img id="DegNumbImg" src='Report/4.Statistics/All_comparison.DEG_stat.png' alt='差异基因统计柱状图'>
+			</a>
+			<p class='table_title'>图 3.2 差异分析概览</p>
+			<p class='introduction'>注：横坐标代表组别，纵坐标代表基因个数，红色的上调基因，绿色为下调基因</p>

@@ -1,0 +1,15 @@
+				</tbody>
+				</table>
+			</div>
+<!--			<p class='table_title'>表 3.3.2-2 显著下调差异表达基因</p>  -->
+			<div class='chart hide' id='IdType_idtype2'>
+				<table align='center' id="table">
+				<thead>
+				<tr>
+				<th>gene_id</th>
+				<th>log2FoldChange</th>
+				<th>pvalue</th>
+				<th>padj</th>
+				</tr>
+				</thead>
+				<tbody>

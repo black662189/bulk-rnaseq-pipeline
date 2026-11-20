@@ -1,0 +1,57 @@
+	<!--part 3.3.7 Reactome富集分析-->
+			<h3><a name='reactome1'>3.3.7 Reactome富集分析</a></h3>
+			<p class='paragraph'>在生物体内，不同的基因产物相互协调来行使生物学功能，对差异表达基因的通路（Pathway）注释
+			分析有助于进一步解读基因的功能。Reactome数据库是一个信号通路多数据库的集合，是一个汇集由专家撰写，经同行评阅的有关
+			人体各项反应及生物学路径文章的数据库。目前该数据库覆盖了UniProt数据库中20000个经人工注释过的人类蛋白中大约70%
+			以上的蛋白质，对46个主要人类生物学研究领域，如细胞凋亡、HIV、流感病毒生活周期、DNA复制、转录、生理止血机制、碳水
+			化合物代谢途径等进行了注释，并对于OMIM疾病表型相关的1005个蛋白质的正常功能进行了记录。
+            对差异基因进行Reactome功能注释，
+			差异基因数目统计见图3.3.7-1<!--（高清图片请点击<a href='image/group1/kegg_histogram.pdf'>如下链接</a>）-->。
+			差异基因通路富集分析结果见图 3.3.7-2<!--（高清图片请点击<a href='image/group1/reactome.pdf'>如下链接</a>）-->，
+			图中呈现了显著性q值最小的前15个通路。各通路热图可点击表 3.3.7-1 内链接查看。
+			</p>
+
+			<table align="center" class="img_table">
+				<tr align="left">
+					<td></td>
+				</tr>
+				<tr>
+				<td width="30%">
+				<a href="image/group1/kegg_histogram.pdf" target="view_window">
+					<img src='image/group1/kegg_histogram.png' width="100%" height="auto">
+				</a>
+				</td>
+				<td width="70%">
+					<div class="ClassType_classtype2">
+                    <a href="image/group1/reactome.pdf" target="view_window" id="IdType_idtype4">
+					<img src="image/group1/reactome.svg" alt="无显著富集的Reactome通路" width="100%" height="auto">
+					</a>
+					</div>
+					</td>
+				</tr>
+				<tr>
+				<td><p class='table_title'>图 3.3.7-1 差异基因数目</p></td>
+				<td>
+					<p class="hide table_title">图 3.3.7-2 差异基因的Reactome通路注释结果</p>
+				</td>
+				</tr>
+			</table>
+
+			<p class='introduction'>注：图 3.3.7-1 横坐标是组别名，纵坐标是鉴定的差异基因数目。红色柱子表示上调的基因数目，
+			蓝色柱子表示下调的基因数目。
+			图 3.3.7-2 横坐标为Reactome通路对应的基因数目，纵坐标为Reactome通路的名称，条形图的颜色表示Reactome pathway通路富集程度，
+			颜色越红表示富集程度越显著。</p>
+			<p class='table_title'>表 3.3.7-1 通路信息概览</p>
+			<div class="ClassType_classtype3">
+<!--			<p>reactome通路信息</p> -->
+			<div class='chart' id="IdType_idtype6">
+				<table align="center" id="table">
+				<thead>
+				<tr>
+				<th>Description</th>
+				<th>pvalue</th>
+				<th>qvalue</th>
+				<th>Count</th>
+				</tr>
+				</thead>
+				<tbody>

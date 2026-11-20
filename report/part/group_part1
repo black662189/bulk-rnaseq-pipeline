@@ -1,0 +1,57 @@
+<!--part 3.3 GROUP-->
+			<h2><a name='group1'>3.3 GROUP</a></h2>
+	<!--part 3.3.1 聚类分析-->		
+			<h3><a name='pca1'>3.3.1 聚类分析</a></h3>
+			<p class='paragraph'>为了检验各组内样品重复性、比较组之间是否具有差异。对样品进行主成分分析和聚类分析。</p>
+			<p class='paragraph'>主成分分析（Principal Component Analysis，PCA）通过正交变换将一组可能存在相关性的变量转换为一组线性不相关的变量，转换后的这组变量叫主成分。我们利用R语言中的 fast.prcomp 函数进行快速的PCA分析，并利用二维散点图的形式展示各样品主成分1（PC1）和主成分2（PC2）数值。当同一实验条件下的生物学重复样品数量大于等于4个，则可利用stat_ellipse函数计算95%置信区间（图中样品填色对应的透明区间）。一般情况下，源于同一实验条件下的生物学重复样品应聚类到一起，形成亚群，若不同实验条件下的样品相互混杂则说明不同实验样品无法通过PC1和PC2进行区分，不同组实验样品间的差异性过小。结果展示如图 3.3.1-1所示<!--（高清图片请点击<a href='image/group1/pca.pdf'>如下链接</a>）-->
+			</p>
+			<p class='paragraph'>层次聚类（Hierarchical Cluster）分析是通过计算样品之间的欧式距离，生成欧氏距离矩阵，利用非加权组平均算法（unweighted pair group method with arithmetic mean，UPGMA）计算的一种分析方法。相似度高的样品被聚为一类，以此类推，最终得到样品的整体聚类结果。一般情况下，源于同一实验条件下的生物学重复样品应聚类到一簇，表明实验条件为影响聚类的主要因素；若同一实验条件下的样品无法聚类到一簇，则说明样品一致性不佳，存在其他因素的干扰。结果展示如图 3.3.1-2所示<!---（高清图片请点击<a href='image/group1/cluster.pdf'>如下链接</a>）-->
+			</p>
+			<table align='center' class="cluster">
+				<thead></thead>
+				<tbody>
+				<tr>
+				<td width="50%">
+				<a href="image/group1/pca.pdf" target="view_window">
+					<img src='image/group1/pca.png' alt='pca' width="100%" height="auto">
+				</a>
+				</td>
+				<td width="50%">
+				<a href="image/group1/cluster.pdf" target="view_window">
+					<img src='image/group1/cluster.svg' alt='cluster' width="100%" height="auto">
+				</a>
+				</td>
+				</tr>
+				<tr>
+				<td><p calss='table_title'>图 3.3.1-1 主成分分析</p></td>
+				<td><p class='table_title'>图 3.3.1-2 层次聚类分析</p></td>
+				</tr>
+				</tbody>
+			</table>
+
+			<p class='introduction'>注：图 3.3.1-1 横坐标表示第一主成分，百分比则表示第一主成分对样品差异的贡献值；纵坐标表示第二主成分，百分比表示第二主成分对样品差异的贡献值；图中的每个点表示一个样品，同一个组的样品使用同一种颜色表示。图 3.3.1-2 每一列代表一个样本，同一组样本使用同一种颜色。
+			</p>
+
+
+	<!--part 3.3.2 基因表达结果-->		
+			<h3><a name='exp1'>3.3.2 差异表达基因筛选</a></h3>
+			<p class='paragraph'>若两组样品具有一定的差异，则对其进行进一步的差异分析，检测差异表达基因。</p>
+			<p class='paragraph'>检测差异表达基因时，需要根据实际情况选取合适的差异表达分析软件。利用DESeq2 R包，进行样品组之间的差异表达分析获得两个生物学条件之间的差异表达基因集。在差异基因检测过程中，将|log2foldchange|&gt;1且padj &lt;0.05作为筛选标准。差异倍数（Fold Change）表示两样品（组）间表达量的比值。错误发现率（False Discovery Rate，FDR）是通过对差异显著性 p 值（p-value）进行校正得到的。由于转录组测序的差异表达分析是对大量的基因表达值进行独立的统计假设检验，会存在假阳性问题，因此在进行差异表达分析过程中，采用了公认的 Benjamini-Hochberg 校正方法对原有假设检验得到的显著性 p 值（p-value）进行校正，并最终采用 FDR 作为差异表达基因筛选的关键指标。表 3.3.2-1展示了显著上调的前50个基因，表 3.3.2-2展示了显著下调的前50个基因。
+			</p>
+			<div class="button">
+				<button name="Button" class="ClassType_classtype1" id="IdType_idtype1">上调差异基因</button>
+				<button name="Button" class="ClassType_classtype1" id="IdType_idtype2">下调差异基因</button>
+			</div>
+			<p class='table_title'>表 3.3.2-1 显著改变差异表达基因</p> 
+			<div class="ClassType_classtype1">
+			<div class='chart' id="IdType_idtype1">
+				<table align='center' id="table">
+				<thead>
+				<tr>
+				<th>gene_id</th>
+				<th>log2FoldChange</th>
+				<th>pvalue</th>
+				<th>padj</th>
+				</tr>
+				</thead>
+				<tbody>

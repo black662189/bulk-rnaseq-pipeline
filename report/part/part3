@@ -1,0 +1,55 @@
+					</ul>
+<!--				<li><a href='#conclusion'>四、结论</a></li>-->
+				<li><a href='#method'>四、方法描述</a></li>
+				<li><a href='#result_file'>五、结果文件说明</a></li>
+				<li><a href='#suggestion'>六、建议 </a></li>
+			</ul>
+			</div>
+			</aside>
+		<section>
+			<header>RNA-seq分析报告</header>
+<!--part 1 概述-->
+			<h1><a name='overview'>一、分析概述</a></h1>
+			<p class='paragraph'>转录组（Transcriptome）广义上指在特定环境或生理条件下的一个细胞、组织或生物体中存在的所有RNA的总和，包括信使RNA（mRNA）、核糖体RNA（rRNA）、转运RNA（tRNA）及其它的非编码RNA（non-coding RNA）。蛋白质是生命活动的主要承担者，由mRNA编码，因此狭义上的转录组则指细胞所能转录出的所有mRNA。无特殊说明，下文提到的转录组均指狭义上的转录组。
+			</p>
+			<p class='paragraph'>若不考虑突变，一个个体或物种的基因组（Genome）基本上是不变的。相比之下，转录组可以随时间或外部环境条件的改变而有所变化。由于转录组包括了细胞里转录出的所有的 mRNA，除却异常的 mRNA 降解现象（如转录衰减），转录组反映了在特定时间点或特定条件下蛋白质编码基因活跃表达情况。转录组测序（Transcriptome Sequencing）是对某一物种的 mRNA 进行高通量测序。转录组测序能够对样品任意时间点或任意条件下的转录组进行测序，拥有精确到单个核苷酸的分辨率。能够动态反映基因转录水平，同时鉴定和定量稀有转录本和正常转录本，并且提供样品特异的转录本序列结构信息。转录组测序利用Poly(A)结构提取生物样品中的mRNA，片段化、反转录为cDNA之后进行高通量测序，获得cDNA片段两端的序列，cDNA片段两端测定的序列称为双端Reads（Pair-ends Reads）或Reads。通过cDNA片段两端的Reads与所选参考基因组的序列比对，定位其在基因组或基因上的位置。基于比对上的数据进行一系列的生物信息学分析。确定外显子/内含子的边界，分析基因可变剪接情况；识别转录区的SNP位点；修正已注释的5'和 3'端基因边界；发掘未注释的基因区和新的转录本；定量基因或转录本表达水平，进而识别不同样品（或样品组）之间显著差异表达的基因或转录本；通过对差异表达基因或转录本的功能注释和功能富集分析，为后续的生物学研究提供分子水平的依据。
+			</p>
+
+			<!--part 2 流程-->
+			<h1><a name='workflow'>二、工作流程</a></h1>
+			<p class='paragraph'>首先对测序得到的原始数据进行质控，得到质控合格的数据。然后将合格的数据比对到参考基因组，对比对结果进行表达量的计算，对表达量数据进行标准化和差异基因分析，得到差异基因。基于所有基因的表达量数据和差异基因数据进行下游的功能分析。
+			</p>
+			<img src='image/analysis_process.png' alt='流程图' width="80%" height="auto">
+			<p class='table_title'>图 2.1 转录组生物信息分析流程图</p>
+<!--part 3 结果-->
+			<h1><a name='result'>三、分析结果</a></h1>
+<!--part 3.1 质控-->
+			<h2><a name='quality'>3.1 测序原始信息及质控</a></h2>
+			<p class='table_title'>表 3.1-1 样本信息</p>
+			<img src='image/sample_info.png' alt='样品信息' width="60%" height="auto">
+			<p class='introduction'></p>
+<!--			<p class='table_title'>表 3.1-2 测序质量信息</p>
+			<img src='image/SequanceQuality_info.png' alt='测序质量信息' width="60%" height="auto">-->
+			<p class='introduction'></p>
+
+			<p class='paragraph'>碱基质量值（Quality Score 或 Q-score）是碱基识别（Base Calling）出错的概率的整数映射。 通常使用的 Phred 质量评估公式[1]为： Q-score=-10×log10(P)，其中 P 为碱基识别出错的概率。下表给出了碱基质量值与碱基识别出错的概率的对应关系：
+			</p>
+			<p class='table_title'>表 3.1-2 碱基质量值与碱基识别出错的概率的对应关系表</p>
+			<img src='image/QC_table.png' alt='QC_table' width="60%" height="auto">
+			<p class='paragraph'>碱基质量值越高表明碱基识别越准确，碱基识别错误率越低。 从表 3.1-3 可知，对于碱基质量值为 Q20 的碱基识别， 100 个碱基中有 1 个错误识别碱基；对于碱基质量值为 Q30 的碱基识别， 1,000 个碱基中有 1 个错误识别碱基； Q40 表示 10,000 个碱基中有 1 个错误识别碱基。以单个碱基为单位，对单个样品所有 reads平行测序的碱基质量值做分布图，可以查看单个样品每个碱基的测序质量。一般认为90%的碱基质量值大于Q20，数据为合格。以图3.1为例，展示碱基质量分布图（各样品质量信息见表3.1-4）
+			</p>
+
+			<img src='image/QC.png' alt='QC' width="60%" height="auto">
+			<p class='table_title'>图 3.1 碱基质量分布示例图</p>
+			<p class='introduction'>注： 横坐标为测序碱基在reads上的位置，纵坐标为碱基质量值。</p>
+			<p clss='table_title'>表 3.1-3 各样品测序质量结果</p>
+			<div class='chart'>
+				<table align='center' id="table">
+				<thead>
+				<tr>
+				<th>样品名称</th>
+				<th>左端下机文件</th>
+				<th>右端下机文件</th>
+				</tr>
+				</thead>
+				<tbody>

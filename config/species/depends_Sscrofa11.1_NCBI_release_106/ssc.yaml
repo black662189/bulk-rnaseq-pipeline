@@ -1,0 +1,61 @@
+outdir: /media/nfs/nfs02/yuzhij/Project/placeholder_outdir
+
+ruledir: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/rule
+database:
+  genome:
+    - /media/nfs/nfs02/yuzhij/pipeline/database/NCBI/genome/Sus_scrofa_Sscrofa11.1_NCBI_release_106/Hisat2Index_ss_exon/genome_tran
+  gene:
+    - /media/nfs/nfs02/yuzhij/pipeline/BGI_RNA_seq/susScr11_refMrna/refMrna.fa.index
+  gtf: /media/nfs/nfs02/yuzhij/pipeline/database/NCBI/genome/Sus_scrofa_Sscrofa11.1_NCBI_release_106/Sscrofa11.protein_coding.gtf
+  des: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Sscrofa11.1_NCBI_release_106/gene_description.txt 
+  depends: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Sscrofa11.1_NCBI_release_106
+  ppi: /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_Sscrofa11.1_NCBI_release_106/rename.uniq.9823.protein.links.v11.0.txt
+
+software:
+  anaconda:
+    - /media/nfs/nfs02/yuzhij/biosoft/mambaforge/envs/RNA-seq/bin
+  snakemake:
+    - /media/nfs/nfs02/yuzhij/biosoft/mambaforge/envs/RNA-seq/bin/snakemake
+  fastqc:
+    - /media/nfs/nfs02/yuzhij/biosoft/mambaforge/envs/RNA-seq/bin/fastqc
+  hisat2:
+    - /media/nfs/nfs02/yuzhij/biosoft/mambaforge/envs/RNA-seq/bin/hisat2
+    - "--dta --dta-cufflinks"
+  stringtie:
+    - /media/nfs/nfs02/yuzhij/biosoft/mambaforge/envs/RNA-seq/bin/stringtie
+  java:
+    - /usr/bin/java
+  samtools:
+    - /media/nfs/nfs02/yuzhij/biosoft/mambaforge/envs/RNA-seq/bin/samtools
+  gsea:
+    - /media/nfs/nfs02/yuzhij/biosoft/gsea-3.0.jar
+  gsva:
+    - /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_F.catus_Fca126_mat1.0_NCBI_release_105/gsva_all.r
+    - /media/nfs/nfs02/yuzhij/pipeline/auto_RNA_Seq_analysis.v4/depends_F.catus_Fca126_mat1.0_NCBI_release_105/gsva_deg.r
+  soap:
+    - /media/nfs/nfs02/yuzhij/biosoft/soap2.21release/bin/soap
+    - "-m 0 -x 1000 -s 28 -l 32 -v 2 -r 2"
+  python:
+    - /usr/bin/python
+    - /media/nfs/nfs02/yuzhij/biosoft/mambaforge/envs/RNA-seq/bin/python
+  R:
+    - /media/nfs/nfs02/yuzhij/biosoft/mambaforge/envs/RNA-seq-R/bin/R
+  Rscript:
+    - /media/nfs/nfs02/yuzhij/biosoft/mambaforge/envs/RNA-seq-R/bin/Rscript
+
+readlength: 50
+species: ssc
+PEorSE: SE
+step:
+  FastQC: 1
+  ReadsRandom: 1
+  Alignment: 1
+  Quantify: 1
+  Comparison: 1
+  Cluster: 1
+  GSEA: 1
+  GO: 1
+  KEGG: 1
+  REACTOME: 1
+  PPI: 1
+  GSVA: 1

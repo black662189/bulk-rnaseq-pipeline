@@ -1,0 +1,15 @@
+				</tbody>
+				</table>
+			</div>
+<!--			<p class='table_title'>分子功能</p> -->
+			<div class='chart hide' id="IdType_idtype12">
+				<table align="center" id="table">
+				<thead>
+				<tr>
+				<th>Description</th>
+				<th>pvalue</th>
+				<th>qvalue</th>
+				<th>Count</th>
+				</tr>
+				</thead>
+				<tbody>

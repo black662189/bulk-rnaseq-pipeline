@@ -1,0 +1,205 @@
+
+header{
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: Arial,KaiTi,"楷体",sans-serif;
+}
+
+body{
+	min-height: 100%;
+	font-family: Arial,KaiTi,"楷体",sans-serif;
+}
+button{
+	margin: 0;
+	padding: 0;
+/*	border:1px solid #ccc;
+*/	border-radius: .3em;
+	/*color:black;*/
+	/*background-color: #ededed;*/
+	width: 100px;
+	height: 40px;
+	cursor: pointer;
+}
+button:active{
+	top: 3px;
+}
+
+/*侧栏样式*/
+aside{
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 28%;
+	float: left;
+	position: fixed;
+	display: block;
+	/*overflow: auto;*/
+	height: 99%;
+	background-color: #ededed;
+	transition: margin-left 1s;
+	-moz-transition:margin-left 1s;
+	-webkit-transition:margin-left 1s;
+	-o-transition:margin-left 1s;
+	z-index: 9999;
+}
+
+/*目录样式*/
+div#Catalogue{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	border-right: 1px solid #ccc;
+	text-align: left;
+	font-weight: bold;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style-type: none;
+	border-bottom: 1px solid #fff;
+	margin: 0;
+	padding: 0;
+
+}
+ul#rank1>li{
+	font-size:20px;
+	line-height: 40px;
+	text-align: left;
+	text-indent:0em;
+	color: #337ab7;
+}
+ul#rank2>li{
+	font-size:18px;
+	line-height: 35px;
+	text-align: left;
+	text-indent:1em;
+}
+ul#rank3>li{
+	font-size:15px;
+	line-height: 30px;
+	text-align: left;
+	padding: 0;
+	text-indent:3em;
+
+}
+ul#rank3>li>a{
+	color:#788fa4;
+	/*color:#8a8fb7;*/
+}
+/*鼠标悬浮在li ul上的背景*/
+ul li:hover{
+	background-color: #dedede;
+}
+/*边栏伸缩事件触发按键*/
+button#sidebar{
+	position: absolute;
+	width: 20px;
+	right: -19px;
+	height: 75px;
+	top: 45%;
+	border: none;
+	font-size: 17px;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	border:1px solid #ccc;
+	border-left: none;
+	border-radius: .3em;
+	color:#a6a6a6;
+}
+
+/*超链接样式*/
+a{
+	text-decoration: none;
+	color:#337ab7;
+	display: block;
+	}
+
+/*正文样式*/
+section{
+	text-align: center;
+	margin: 0% 4% 0% 4%;
+	height: 100%;
+
+}
+/*标题样式*/
+h1,h2,h3{
+	text-align: left;
+}
+
+/*文字样式*/
+p.paragraph{
+	text-align: justify;
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+/*注解样式*/
+p.introduction{
+	text-align: justify;
+	text-indent: 2em;
+	line-height: 1.3em;
+/*	font-family: KaiTi,serif;*/
+
+}
+
+/*表格样式*/
+.chart{
+	width: 100%;
+	height: 500px;
+	overflow: auto;
+}
+table.chart,tr,td,tbody{
+	border: 1px solid grey;
+}
+th
+  {
+  background-color:grey;
+  color:white;
+  }
+
+ /*结果文件详解 ,意见部分*/
+#reslt_file ,#suggest{
+	text-align: left;
+}
+#reslt_file>ul>li{
+	text-indent:2em;
+}
+
+.goImg{
+	width: 80%;
+	#max-width: 100%;
+}
+
+/*button左对齐*/
+div.button{
+	text-align: left;
+}
+
+/*去除图片表格布局边框*/
+table.img_table>tbody>tr>td{
+	border-width:0;
+}
+table.cluster>tbody>tr>td{
+	border-width:0;
+}
+
+/*去除table表头下黑线*/
+table#table.dataTable thead th{
+  border-bottom: 0;
+}
+
+/*设置图片大小*/
+table.cluster{
+	width: 60%;
+}
+/*设置差异基因统计柱状图大小*/
+img#DegNumbImg{
+	max-height: 500px;
+	max-width: 80%;
+}

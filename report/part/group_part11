@@ -1,0 +1,19 @@
+				</tbody>
+				</table>
+			</div>
+            </div>
+                <p class='introduction'>注：level1为一级通路；level2为二级通路；level3为三级通路；
+                 	pvalue为该通路的p值；FDR为该通路的FDR值； 	zscore为该通路的标准分数。</p>
+<!--part 3.3.4 Gene Set Variation Analysis(GSVA)分析-->
+<h3><a name='gsva1'>3.3.4 Gene Set Variation Analysis(GSVA)分析</a></h3>
+<p class="paragraph">
+    GSVA又名Gene Set Variation Analysis，被称为基因集变异分析,是一种非参数的无监督分析方法。通过GSVA分析，
+    可以从代谢通路通路或者感兴趣的通路水平对不同的比较组进行差异分析，分析是否由于通路的差异导致了生物学性状上的不同。
+    GSVA主要是通过将基因在不同样品间的表达量矩阵转化成基因集在样品间的表达量矩阵，从而来评估不同的代谢通路在不同样品间是否存在差异。
+    我们通过GSVA分析得到了代谢通路在不同组合间的热图，可以直观的反映通路在不同组合间的差异，详细结果见图3.3.4-1。
+</p>
+<p class='table_title'>图 3.3.4-1 差异通路的得分热图</p>
+<a href="image/group1/gsva.limma_output.filter.pdf" target="view_window" id="IdType_gsva">
+    <img src="image/group1/gsva.limma_output.filter.png" alt="无显著差异的通路" class='goImg'>
+</a>
+<p class='introduction'>注：红色表示上调， 蓝色表示下调。</p>

@@ -1,0 +1,8 @@
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<p class='introduction'>注：gene1:互作基因1；gene2：互作的基因2；protein_cluster1： STRING数据库中基因对应的蛋白号1；protein_cluster2：
+    STRING数据库中基因对应的蛋白号2
+    score： 联合分数， 值越大表示越可信。</p>

@@ -1,0 +1,30 @@
+<!--part 3.3.8 蛋白相互作用(PPI)分析-->
+<h3><a name="ppi1">3.3.8 蛋白相互作用(PPI)分析</a></h3>
+<p class="paragraph">
+    蛋白之间通常通过相互作用结合成复合物之后行使相应的功能。 通过PPI分析， 具有相互作用的
+    DEG 通常具有相似的功能。 根据STRING蛋白互作数据库， 对每组差异表达基因进行蛋白互作分
+    析， 互作关系结果如下表3.3.8-1。 我们取得可信度最高的前100个互作关系做图， 结果见图3.3.7-1
+</p>
+<a href="image/group1/ppi.differentially_expressed_genes.network.pdf" target="view_window" id="IdType_ppi">
+    <img src="image/group1/ppi.differentially_expressed_genes.network.svg" alt="无PPI蛋白互作网络结果" class='goImg'>
+</a>
+
+<p class='table_title'>图 3.3.8-1 差异表达基因的蛋白互作关系图</p>
+<p class='introduction'>注：红色表示上调基因， 蓝色表示下调基因。 圈的大小表示关系密集程度</p>
+
+<p class='table_title'>表 3.3.8-1 差异表达基因蛋白互作关系部分结果示例</p>
+<div class="ClassType_5">
+    <div class='chart' id="IdType_10">
+        <table align="center" id="table">
+            <thead>
+            <tr>
+                <th>gene1</th>
+                <th>gene2</th>
+                <th>protein_cluster1</th>
+                <th>protein_cluster2</th>
+                <th>score</th>
+            </tr>
+            </thead>
+            <tbody>
+
+

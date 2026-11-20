@@ -1,0 +1,54 @@
+				</tbody>
+				</table>
+			</div>
+            </div>
+			<p class='introduction'>注：gene_id：基因编号；log2FoldChange：表达量差异倍数的对数值；<!--lfcse：log2FoldChange的标准误；stat：Wald statistic，用于计算p值；-->pvalue：p值；padj：校正后的p值。
+
+
+	<!--part 3.3.3 通路富集分析-->		
+			<h3><a name='kegg1'>3.3.3 KEGG通路富集分析</a></h3>
+			<p class='paragraph'>在生物体内，不同的基因产物相互协调来行使生物学功能，对差异表达基因的通路（Pathway）注释分析有助于进一步解读基因的功能。KEGG（Kyoto Encyclopedia of Genes and Genomes）数据库是一个多数据库的集合，包含了基因组、生物通路、疾病、药物、化学分子等多个数据库。利用KEGG的生物通路数据库分析差异表达基因在某一通路上是否富集,即为差异表达基因的通路富集分析。对差异基因进行KEGG功能注释，差异基因数目统计见图3.3.3-1<!--（高清图片请点击<a href='image/group1/kegg_histogram.pdf'>如下链接</a>）-->。差异基因通路富集分析结果见图 3.3.3-2<!--（高清图片请点击<a href='image/group1/kegg.pdf'>如下链接</a>）-->，图中呈现了显著性q值最小的前15个通路。各通路热图可点击表 3.3.3-1 内链接查看。
+			</p>
+
+			<table align="center" class="img_table">
+				<tr align="left">
+					<td></td>
+				</tr>
+				<tr>
+				<td width="30%">
+				<a href="image/group1/kegg_histogram.pdf" target="view_window">
+					<img src='image/group1/kegg_histogram.png' alt="差异基因统计柱状图" width="100%" height="auto">
+				</a>
+				</td>
+				<td width="70%">
+					<div class="ClassType_classtype2">
+					<a href="image/group1/kegg.pdf" target="view_window" id="IdType_idtype3">
+					<img src='image/group1/kegg.png' alt="无显著富集的KEGG通路" width="100%" height="auto">
+					</a>
+					</div>
+					</td>
+				</tr>
+				<tr>
+				<td><p class='table_title'>图 3.3.3-1 差异基因数目</p></td>
+				<td>
+					<p class='table_title'>图 3.3.3-2 差异基因的通路注释结果</p>
+				</td>
+				</tr>
+			</table>
+
+			<p class='introduction'>注：图 3.3.3-1 横坐标是组别名，纵坐标是鉴定的差异基因数目。红色柱子表示上调的基因数目，蓝色柱子表示下调的基因数目。图 3.3.3-2 横坐标为显著性(值越大越越显著），左侧纵坐标为对应的KEGG pathway三级通路信息；圆点大小表示富集到此通路的差异基因个数，圆点颜色表示富集到的KEGG pathway二级通路类别，相同的颜色代表富集到同一类KEGG pathway二级通路；右侧纵坐标为对应的二级通路信息。</p>
+			<p class='table_title'>表 3.3.3-1 通路信息概览</p>
+			<div class="ClassType_classtype3">
+			<div class='chart' id="IdType_idtype5">
+				<table align="center" id="table">
+				<thead>
+				<tr>
+				<th>level1</th>
+				<th>level2</th>
+				<th>level3</th>
+                <th>pathview</th>
+				<th>pvalue</th>
+				<th>FDR</th>
+				</tr>
+				</thead>
+				<tbody>

@@ -1,0 +1,13 @@
+	<!--part 3.3.5 Gene Set Enrichment Analysis (GSEA)分析-->
+			<h3><a name='gsea1'>3.3.5 Gene Set Enrichment Analysis (GSEA)分析</a></h3>
+			<p class='paragraph'>一般的差异分析，往往侧重于比较两组间的基因表达差异，几种对少数几个显著上调或者下调的基因
+进行分析，这容易遗漏部分差异表达不显著却有重要生物学意义的基因，忽略一些基因的生物特性、基因调控网络之间的关系及基因功能>和意义等有价值的信息。故采用GSEA分析，从整体水平上分析基因的表达趋势。基因集富集分析（Gene Set Enrichment Analysis ，GSEA）,使用预先定义好的基因集（GeneSet），将基因按照差异表达程度排序，然后检验预先定义的基因集是否集中在这个排序表的顶端或底端，从而获知这些基因集的整体表达改变情况。结果点击<a href='path1' target="view_window">Sample1组富集通路</a>&#8195;<a href='path2' target="view_window">Sample2组富集通路</a>
+			</p>
+<!--
+			<img src='image/gsea.png' alt='gsea'>
+			<p class='table_title'>图 3.3.5-1 GSEA富集分析结果示例</p>
+			<p class='paragraph'>一般的差异分析，往往侧重于比较两组间的基因表达差异，几种对少数几个显著上调或者下调的基因进行分析，这容易遗漏部分差异表达不显著却有重要生物学意义的基因，忽略一些基因的生物特性、基因调控网络之间的关系及基因功能和意义等有价值的信息。故采用GSEA分析，从整体水平上分析基因的表达趋势。</p> -->
+			<p class='introduction'>注：GS follow link to MSigDB是所定义的基因集的名称；size表示该基因集所包含的基因数量；ES是该基因集的富集积分，ES &gt;0表示该基因集整体上调，ES &lt;0表示该基因集整体下调，富集积分绝对值越大，代表该基因集的富集程度越高，整体改变越明显；NES是经过标准化后的ES值，用于不同基因集之间富集程度的比较， NES的绝对值越大表示该基因集的富集程度越高（相比其他基因集），整张表按照NES的绝对值由大到小排列。FDR表示该基因集的错误阳性率，通常认为FDR &lt;0.25的基因集是具有统计学意义的。
+			</p>
+
+

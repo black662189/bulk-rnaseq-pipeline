@@ -1,0 +1,12 @@
+						<li><a href='#group1'>3.3 GROUP</a></li>
+							<ul id="rank3">
+								<li><a href='#pca1'>3.3.1 聚类分析</a></li>
+								<li><a href='#exp1'>3.3.2 差异表达基因筛选</a></li>
+								<li><a href='#kegg1'>3.3.3 KEGG通路富集分析</a></li>
+								<li><a href="#gsva1">3.3.4 Gene Set Variation Analysis (GSVA)</a></li>
+								<li><a href='#gsea1'>3.3.5 Gene Set Enrichment Analysis (GSEA)</a></li>
+								<li><a href="#go1">3.3.6 Gene Ontology (GO)富集分析</a></li>
+								<li><a href="#reactome1">3.3.7 Reactome富集分析</a></li>
+                               <li><a href="#ppi1">3.3.8 蛋白相互作用(PPI)分析</a></li>
+							</ul>
+<!--################################################以上为part2####################################################-->

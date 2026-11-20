@@ -1,0 +1,40 @@
+<!--part 3.3.6 Gene Ontology (GO)富集分析-->
+<h3><a name="go1">3.3.6 Gene Ontology (GO)富集分析</a></h3>
+<p class="paragraph">Gene Ontology（简称GO）是一个国际标准化的基因功能分类体系，提供了一套动态更新的标准词汇表（Controlled
+    Vocabulary）来全面描述生物体中基因和基因产物的属性。GO总共有三个Ontology，分别描述基因的分子功能（Molecular Function）、细胞组分（Cellular
+    Component）、生物过程（Biological Process）。</p>
+<div class="button">
+    <button name="Button" class="ClassType_classtype4" id="IdType_idtype7">生物过程</button>
+    <button name="Button" class="ClassType_classtype4" id="IdType_idtype8">细胞组成</button>
+    <button name="Button" class="ClassType_classtype4" id="IdType_idtype9">分子功能</button>
+</div>
+<div class="ClassType_classtype4">
+    <a href="image/group1/biological_process.pdf" target="view_window" id="IdType_idtype7">
+        <img src="image/group1/biological_process.svg" alt="无显著富集的GO生物过程通路" class='goImg'>
+    </a>
+    <a href="image/group1/cellular_component.pdf" target="view_window" class='hide' id="IdType_idtype8">
+        <img src="image/group1/cellular_component.svg" alt="无显著富集的GO细胞组成通路" class='goImg'>
+    </a>
+    <a href="image/group1/molecular_function.pdf" target="view_window" class='hide' id="IdType_idtype9">
+        <img src="image/group1/molecular_function.svg" alt="无显著富集的GO分子功能通路" class='goImg'>
+    </a>
+</div>
+<p class='table_title'>图 3.3.6-1 差异基因的GO富集结果</p>
+<div class="button">
+    <button name="Button" class="ClassType_classtype5" id="IdType_idtype10">生物过程</button>
+    <button name="Button" class="ClassType_classtype5" id="IdType_idtype11">细胞组成</button>
+    <button name="Button" class="ClassType_classtype5" id="IdType_idtype12">分子功能</button>
+</div>
+<p class='table_title'>表 3.3.6-1 GO富集结果概览</p>
+<div class="ClassType_classtype5">
+    <div class='chart' id="IdType_idtype10">
+        <table align="center" id="table">
+            <thead>
+            <tr>
+                <th>Description</th>
+                <th>pvalue</th>
+                <th>qvalue</th>
+                <th>Count</th>
+            </tr>
+            </thead>
+            <tbody>
